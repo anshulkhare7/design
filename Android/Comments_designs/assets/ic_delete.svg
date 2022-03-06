@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="12px" viewBox="0 0 11 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_delete" stroke="#4A5568" stroke-width="0.82">
+            <g id="Group" transform="translate(1.000000, 1.000000)">
+                <path d="M8.4375,2.22222222 L7.94964375,8.96805556 C7.90756875,9.5495 7.4176875,10 6.8275125,10 L2.17251,10 C1.58229,10 1.09242,9.5495 1.0503675,8.96805556 L0.5625,2.22222222" id="Path"></path>
+                <line x1="3.375" y1="4.44444444" x2="3.375" y2="7.77777778" id="Path" stroke-linecap="round"></line>
+                <line x1="5.625" y1="4.44444444" x2="5.625" y2="7.77777778" id="Path" stroke-linecap="round"></line>
+                <path d="M6.1875,2.22222222 L6.1875,0.555555556 C6.1875,0.248733333 5.93566875,0 5.625,0 L3.375,0 C3.0643425,0 2.8125,0.248733333 2.8125,0.555555556 L2.8125,2.22222222" id="Path"></path>
+                <line x1="0" y1="2.22222222" x2="9" y2="2.22222222" id="Path" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

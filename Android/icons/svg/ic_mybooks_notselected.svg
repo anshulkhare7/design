@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_mybooks_notselected</title>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-271.000000, -169.000000)" stroke="#000000">
+            <g id="ic_mybooks_notselected" transform="translate(272.000000, 170.000000)">
+                <path d="M23.8,8.29198173 L23.8,20.7119544 C20.5399368,21.1794039 16.4084082,21.5849311 12.8,23.7 L12.8,11.8358247 L12.8,11.8358247 C15.273536,9.85752206 19.9580303,8.66512971 23.8,8.29198173 Z M1.77635684e-15,8.29198173 C3.84196968,8.66512971 8.526464,9.85752206 11,11.8358247 L11,23.7 C7.39159181,21.5849311 3.26006317,21.1794039 1.77635684e-15,20.7119544 L1.77635684e-15,8.29198173 Z" id="Combined-Shape" stroke-width="1.4" fill-rule="nonzero"></path>
+                <path d="M11.909715,6.48862143 C13.8949917,6.48862143 15.7593206,7.20794711 17.3751405,8.46915943 L17.380599,8.47 C17.3860851,8.47770881 17.3930448,8.48316009 17.4,8.48862143 L17.366,8.488 L17.2125308,8.69214444 C15.8983647,10.3702503 13.9999629,11.4658844 11.9,11.4658844 C9.6871143,11.4658844 7.71765654,10.2996978 6.4,8.4658844 L6.449,8.465 L6.70819473,8.26963657 C8.26176231,7.13236699 10.0316294,6.48862143 11.909715,6.48862143 Z M11.8943676,-3.99680289e-14 C13.2167769,-3.99680289e-14 14.2887353,1.05533214 14.2887353,2.35714286 C14.2887353,3.65899286 13.2167769,4.71428571 11.8943676,4.71428571 C10.5719584,4.71428571 9.5,3.65899286 9.5,2.35714286 C9.5,1.05533214 10.5719584,-3.99680289e-14 11.8943676,-3.99680289e-14 Z" id="Combined-Shape" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4.07500219,13.5 C4.07500219,13.5 6.07500219,13.5 7.07500219,14.5" id="Path-2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(5.575002, 14.000000) rotate(3.000000) translate(-5.575002, -14.000000) "></path>
+                <path d="M16.58,13.5 C16.58,13.5 18.58,13.5 19.58,14.5" id="Path-2-Copy-2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(18.080000, 14.000000) scale(-1, 1) rotate(3.000000) translate(-18.080000, -14.000000) "></path>
+                <path d="M16.58,17.5 C16.58,17.5 18.58,17.5 19.58,18.5" id="Path-2-Copy-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(18.080000, 18.000000) scale(-1, 1) rotate(3.000000) translate(-18.080000, -18.000000) "></path>
+                <path d="M4.07500219,17.5 C4.07500219,17.5 6.07500219,17.5 7.07500219,18.5" id="Path-2-Copy" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(5.575002, 18.000000) rotate(3.000000) translate(-5.575002, -18.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
