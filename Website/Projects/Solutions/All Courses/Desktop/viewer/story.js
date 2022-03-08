@@ -1,5 +1,5 @@
 var story = {
- "docName": "web-export-desktop",
+ "docName": "web-allcourses-desktop",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,7 +13,7 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "Web_export_desktop",
+ "title": "Web_allcourses_desktop",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
@@ -203,38 +203,15 @@ var story = {
    "links": []
   },
   {
-   "id": "98FF2459-EB31-4A39-BE33-7C5211A19804",
+   "id": "D150F761-3072-4D2E-812C-7D5689089E8B",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
    "index": 8,
-   "image": "footer.png",
-   "image2x": "footer@2x.png",
-   "width": 1440,
-   "height": 1024,
-   "x": 12032,
-   "y": 665,
-   "title": "Footer",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
-   "id": "111C5BAB-20C4-40D9-898C-24BF436F2EEA",
-   "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
-   "index": 9,
    "image": "home.png",
    "image2x": "home@2x.png",
    "width": 1440,
-   "height": 3543,
-   "x": 13598,
-   "y": 678,
+   "height": 4230,
+   "x": 13572,
+   "y": 665,
    "title": "Home",
    "transAnimType": 0,
    "layout": {
@@ -251,7 +228,7 @@ var story = {
   {
    "id": "C70EAB1F-A034-4136-BA38-903F9A829F7F",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
-   "index": 10,
+   "index": 9,
    "image": "coursepage.png",
    "image2x": "coursepage@2x.png",
    "width": 1440,
@@ -274,7 +251,7 @@ var story = {
   {
    "id": "29FF1078-06F3-4BAA-B316-6C04D0250A03",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
-   "index": 11,
+   "index": 10,
    "image": "seriespage.png",
    "image2x": "seriespage@2x.png",
    "width": 1440,
@@ -297,7 +274,7 @@ var story = {
   {
    "id": "9580F4DF-95F1-44A0-8B4D-0988FE5A1A7F",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
-   "index": 12,
+   "index": 11,
    "image": "topicpage.png",
    "image2x": "topicpage@2x.png",
    "width": 1440,
@@ -320,7 +297,7 @@ var story = {
   {
    "id": "C5DD2501-F3C5-4E84-9253-8719A86AE8B2",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
-   "index": 13,
+   "index": 12,
    "image": "cartpage.png",
    "image2x": "cartpage@2x.png",
    "width": 1440,
@@ -343,7 +320,7 @@ var story = {
   {
    "id": "BD97E5B8-474D-4931-A81B-290F032DC8FE",
    "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 14,
+   "index": 13,
    "image": "ic_person_placeholder.png",
    "image2x": "ic_person_placeholder@2x.png",
    "width": 36,
@@ -366,7 +343,7 @@ var story = {
   {
    "id": "FE03E7CA-D949-4AD8-95B8-A7D802999E32",
    "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 15,
+   "index": 14,
    "image": "ic_close.png",
    "image2x": "ic_close@2x.png",
    "width": 13,
@@ -399,5 +376,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 16
+ "totalImages": 15
 }
