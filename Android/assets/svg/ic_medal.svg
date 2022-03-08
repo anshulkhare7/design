@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="15px" viewBox="0 0 11 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_medal copy</title>
+    <g id="Figma" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard-Copy" transform="translate(-66.000000, -319.000000)" stroke="#000000">
+            <g id="ic_medal-copy" transform="translate(67.000000, 320.000000)">
+                <path d="M4.6875,9.375 C7.27634,9.375 9.37504,7.27633 9.37504,4.6875 C9.37504,2.09867 7.27634,0 4.6875,0 C2.09867,0 8.8817842e-16,2.09867 8.8817842e-16,4.6875 C8.8817842e-16,7.27633 2.09867,9.375 4.6875,9.375 Z" id="Path"></path>
+                <path d="M4.6875,7.5 C6.24081,7.5 7.50004,6.2408 7.50004,4.6875 C7.50004,3.1342 6.24081,1.875 4.6875,1.875 C3.1342,1.875 1.875,3.1342 1.875,4.6875 C1.875,6.2408 3.1342,7.5 4.6875,7.5 Z" id="Path"></path>
+                <polyline id="Path" points="7.50034 8.43726 7.50034 13.125 4.68743 11.7188 1.87534 13.125 1.87534 8.43767"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
