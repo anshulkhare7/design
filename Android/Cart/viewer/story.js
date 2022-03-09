@@ -1,5 +1,5 @@
 var story = {
- "docName": "exportscart",
+ "docName": "1-cart",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,7 +13,7 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "ExportsCart",
+ "title": "1_Cart",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
@@ -86,6 +86,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "9C572988-BC78-4C27-81E9-ED0EECE5EDC9",
+   "groupID": "F71A5EAE-F7B5-496E-9DEF-117423708CAF",
+   "index": 3,
+   "image": "empty_cart.png",
+   "image2x": "empty_cart@2x.png",
+   "width": 412,
+   "height": 803,
+   "x": 1469,
+   "y": 23,
+   "title": "Empty cart",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -100,5 +123,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 3
+ "totalImages": 4
 }
