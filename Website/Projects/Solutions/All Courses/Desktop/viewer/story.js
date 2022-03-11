@@ -272,14 +272,14 @@ var story = {
    "links": []
   },
   {
-   "id": "29FF1078-06F3-4BAA-B316-6C04D0250A03",
+   "id": "CB911238-3787-4484-BB2E-1BB2B8DAB841",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
    "index": 11,
    "image": "seriespage.png",
    "image2x": "seriespage@2x.png",
    "width": 1440,
-   "height": 1753,
-   "x": 16646,
+   "height": 1829,
+   "x": 16634,
    "y": 669,
    "title": "SeriesPage",
    "transAnimType": 0,
