@@ -1,5 +1,5 @@
 var story = {
- "docName": "1-cart",
+ "docName": "cart-design",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,7 +13,7 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "1_Cart",
+ "title": "Cart_design",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
@@ -109,6 +109,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "B19F19BF-8CF9-4A4C-9DD3-55BC84EE98E8",
+   "groupID": "F71A5EAE-F7B5-496E-9DEF-117423708CAF",
+   "index": 4,
+   "image": "bookenrolment.png",
+   "image2x": "bookenrolment@2x.png",
+   "width": 412,
+   "height": 803,
+   "x": 1955,
+   "y": 23,
+   "title": "BookEnrolment",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -123,5 +146,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 4
+ "totalImages": 5
 }
