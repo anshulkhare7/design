@@ -1,5 +1,5 @@
 var story = {
- "docName": "ap-solutions-web",
+ "docName": "web-mobile",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,21 +13,44 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "AP solutions web",
+ "title": "Web_mobile",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
  "pages": [
   {
-   "id": "583CFC5A-FF56-44BE-85B1-A38F1A7A7FAD",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
+   "id": "FD870334-4B76-46CF-BD78-4F0BB9F3AE9A",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
    "index": 0,
+   "image": "footer.png",
+   "image2x": "footer@2x.png",
+   "width": 412,
+   "height": 610,
+   "x": -2176,
+   "y": -991,
+   "title": "Footer",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "C7EE2AE2-8F7D-4788-8EEF-AA702EC0520F",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 1,
    "image": "search_disable.png",
    "image2x": "search_disable@2x.png",
    "width": 412,
    "height": 914,
-   "x": -1263,
-   "y": -1676,
+   "x": -1712,
+   "y": -991,
    "title": "Search_Disable",
    "transAnimType": 0,
    "layout": {
@@ -42,15 +65,15 @@ var story = {
    "links": []
   },
   {
-   "id": "EB23CE83-68D1-4905-9759-8FF0A1EE1106",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 1,
+   "id": "EF7B6BB4-625F-4501-8274-7C1A4103E943",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 2,
    "image": "search_enable.png",
    "image2x": "search_enable@2x.png",
    "width": 412,
    "height": 914,
-   "x": -799,
-   "y": -1672,
+   "x": -1248,
+   "y": -987,
    "title": "Search_Enable",
    "transAnimType": 0,
    "layout": {
@@ -65,15 +88,15 @@ var story = {
    "links": []
   },
   {
-   "id": "7339A71E-51B8-463C-8898-3E5B4D771668",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 2,
+   "id": "1A194068-6561-417F-834F-AD009FF0250C",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 3,
    "image": "search_categoryselected.png",
    "image2x": "search_categoryselected@2x.png",
    "width": 412,
    "height": 914,
-   "x": -351,
-   "y": -1676,
+   "x": -800,
+   "y": -991,
    "title": "Search_CategorySelected",
    "transAnimType": 0,
    "layout": {
@@ -88,15 +111,15 @@ var story = {
    "links": []
   },
   {
-   "id": "1807AF87-158B-459F-AA7C-2667B68CD886",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 3,
+   "id": "F387A6C2-7691-4AFE-BD01-841FC0C50544",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 4,
    "image": "home.png",
    "image2x": "home@2x.png",
    "width": 412,
    "height": 2990,
-   "x": 97,
-   "y": -1662,
+   "x": -352,
+   "y": -987,
    "title": "Home",
    "transAnimType": 0,
    "layout": {
@@ -111,15 +134,15 @@ var story = {
    "links": []
   },
   {
-   "id": "339BD76F-5A6F-455E-8A21-D65FDE4C8684",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 4,
+   "id": "6540697E-4983-4991-AEFB-169668C0E154",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 5,
    "image": "course.png",
    "image2x": "course@2x.png",
    "width": 412,
    "height": 2243,
-   "x": 561,
-   "y": -1676,
+   "x": 112,
+   "y": -991,
    "title": "Course",
    "transAnimType": 0,
    "layout": {
@@ -134,15 +157,15 @@ var story = {
    "links": []
   },
   {
-   "id": "1D58DE6C-C0AC-4DD3-BA57-71486F4FCF0E",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 5,
+   "id": "E6697111-9C1B-472E-B389-4B7F5C6797CC",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 6,
    "image": "topic.png",
    "image2x": "topic@2x.png",
    "width": 412,
    "height": 1213,
-   "x": 1026,
-   "y": -1674,
+   "x": 577,
+   "y": -989,
    "title": "Topic",
    "transAnimType": 0,
    "layout": {
@@ -157,15 +180,15 @@ var story = {
    "links": []
   },
   {
-   "id": "D6DF9667-D5D9-4C71-9601-99025131F2CD",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 6,
+   "id": "8134E1DE-8572-4CB4-8C10-DA365CFA6752",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 7,
    "image": "series.png",
    "image2x": "series@2x.png",
    "width": 412,
    "height": 1502,
-   "x": 1490,
-   "y": -1675,
+   "x": 1041,
+   "y": -990,
    "title": "Series",
    "transAnimType": 0,
    "layout": {
@@ -180,15 +203,15 @@ var story = {
    "links": []
   },
   {
-   "id": "8D3C8DCC-5249-4725-905A-A81577D6E8EF",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 7,
+   "id": "EF6A70FD-F780-4D82-AE87-3D06F0E17F17",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 8,
    "image": "sidemenu2.png",
    "image2x": "sidemenu2@2x.png",
    "width": 412,
    "height": 789,
-   "x": 1936,
-   "y": -1672,
+   "x": 1487,
+   "y": -987,
    "title": "SideMenu2",
    "transAnimType": 0,
    "layout": {
@@ -203,15 +226,15 @@ var story = {
    "links": []
   },
   {
-   "id": "5DC5A2B6-DAB3-481C-9469-0D0C5DE22C29",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 8,
+   "id": "A88D1040-9FE6-4C2A-98A7-4B41FB7C7A59",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 9,
    "image": "sidemenu1.png",
    "image2x": "sidemenu1@2x.png",
    "width": 412,
    "height": 790,
-   "x": 2401,
-   "y": -1673,
+   "x": 1952,
+   "y": -988,
    "title": "SideMenu1",
    "transAnimType": 0,
    "layout": {
@@ -226,15 +249,15 @@ var story = {
    "links": []
   },
   {
-   "id": "BC5DAA21-9D32-467A-A445-64619B69D0DD",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 9,
+   "id": "F6245FF0-EE6B-411A-A44D-1A34D82B1F44",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 10,
    "image": "topic_copy.png",
    "image2x": "topic_copy@2x.png",
    "width": 412,
    "height": 810,
-   "x": 2844,
-   "y": -1677,
+   "x": 2395,
+   "y": -992,
    "title": "Topic Copy",
    "transAnimType": 0,
    "layout": {
@@ -249,15 +272,15 @@ var story = {
    "links": []
   },
   {
-   "id": "472C3533-E03F-4E83-8AF4-7493E2F6D011",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "index": 10,
+   "id": "1146DA2E-2917-4F16-AD1A-B7705949E29F",
+   "groupID": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "index": 11,
    "image": "cart.png",
    "image2x": "cart@2x.png",
    "width": 412,
    "height": 1319,
-   "x": 3293,
-   "y": -1677,
+   "x": 2838,
+   "y": -954,
    "title": "Cart",
    "transAnimType": 0,
    "layout": {
@@ -274,10 +297,11 @@ var story = {
  ],
  "groups": [
   {
-   "id": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "name": "ExportMobile"
+   "id": "C1EAA091-DFA3-414B-B1AD-88FD644C1B50",
+   "name": "Page 1"
   }
  ],
+ "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 11
+ "totalImages": 12
 }

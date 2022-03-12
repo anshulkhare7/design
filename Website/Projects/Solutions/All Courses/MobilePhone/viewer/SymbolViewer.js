@@ -27,6 +27,7 @@ class SymbolViewer extends AbstractViewer {
         this.currentLib = ""
         this.selected = null
         this.showSymbols = false
+        this.insideExpViewer = false
     }
 
     initialize(force = false) {
@@ -101,7 +102,18 @@ class SymbolViewer extends AbstractViewer {
         return this.visible ? this.hide() : this.show()
     }
 
+    hide() {
+        super.hide()
+        if (this.insideExpViewer) {
+            this.insideExpViewer = false
+            viewer.expViewer.show()
+        }
+    }
 
+    showFromExpViewer() {
+        this.insideExpViewer = true
+        this.show()
+    }
 
     _hideSelf() {
         var isModal = viewer.currentPage && viewer.currentPage.isModal
@@ -177,6 +189,10 @@ class SymbolViewer extends AbstractViewer {
 
     _showEmptyContent() {
         $("#symbol_viewer_content").html("")
+        $('#symbol_viewer #empty').html(story.experimentalExisting ?
+            "Click any element to inspect.<br/>EXPERIMENTAL widgets are in <span style='color:orange'>orange</span>." :
+            "Click any element to inspect"
+        );
         $('#symbol_viewer #empty').removeClass("hidden")
     }
 
@@ -238,9 +254,13 @@ class SymbolViewer extends AbstractViewer {
 
     _processLayerList(layers, sSI = null) {
         for (var l of layers.slice().reverse()) {
-            if (SUPPORT_TYPES.indexOf(l.tp) >= 0 && !l.hd) {
+            const isIcon = l.s && l.s.indexOf(ICON_TAG) > 0;
+            if (isIcon || (SUPPORT_TYPES.indexOf(l.tp) >= 0 && !l.hd)) {
                 this._showElement(l, sSI)
             }
+            // don't go deep inside an icon
+            if (isIcon) continue
+            // process childs
             if (undefined != l.c)
                 this._processLayerList(l.c, "SI" == l.tp ? l : sSI)
         }
@@ -320,6 +340,7 @@ class SymbolViewer extends AbstractViewer {
             const styleInfo = styleName != undefined ? viewer.symbolViewer._findStyleAndLibByStyleName(styleName) : undefined
             const symInfo = symName != undefined ? viewer.symbolViewer._findSymbolAndLibBySymbolName(symName) : undefined
 
+            sv.docLinkAdded = false
             var info = ""
             // layer.b : shared library name, owner of style or symbol
             // layer.s : symbol name
@@ -376,7 +397,7 @@ class SymbolViewer extends AbstractViewer {
         var style = "left: " + l.finalX + "px; top:" + l.finalY + "px; "
         style += "width: " + l.w + "px; height:" + l.h + "px; "
         var symbolDiv = $("<div>", {
-            class: "symbolDiv",
+            class: "symbolDiv" + (siLayer && siLayer.s && siLayer.s.includes("EXPERIMENTAL") ? " exp" : ""),
         }).attr('style', style)
         symbolDiv.mouseenter(function () {
             viewer.symbolViewer.mouseEnterLayerDiv($(this))
@@ -432,7 +453,7 @@ class SymbolViewer extends AbstractViewer {
         // Drop path to icon, leave only name
         const iconTagPos = symName.indexOf(ICON_TAG)
         if (iconTagPos >= 0) {
-            symName = symName.substring(iconTagPos).replace(ICON_TAG, ICON_TAG2)
+            symName = symName.substring(iconTagPos).replace(ICON_TAG, ICON_TAG2) + "-" + symName.substring(0, 2)
             categoryName = "Icon"
         }
         //
@@ -448,6 +469,7 @@ class SymbolViewer extends AbstractViewer {
 
     _showExtDocRef(layer, symName, siLayer) {
         const emptyRes = ""
+        if (this.docLinkAdded) return emptyRes
         if (undefined == layer.b && (undefined == siLayer || undefined == siLayer.b)) return emptyRes
         //
         let href = undefined
@@ -474,6 +496,8 @@ class SymbolViewer extends AbstractViewer {
         }
         if (!href) return emptyRes
         //        
+        if (href.toLowerCase().includes("experimental") && !name.toLowerCase().includes("experimental")) name += "-EXPERIMENTAL"
+        this.docLinkAdded = true
         return `
                 <hr>
                 <div class="block">
