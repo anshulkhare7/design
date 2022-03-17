@@ -1,5 +1,5 @@
 var story = {
- "docName": "mycoursesplayer",
+ "docName": "mycourses",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,21 +13,67 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "MyCoursesPlayer",
+ "title": "MyCourses",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
  "pages": [
   {
-   "id": "221FA5D7-ED08-42F6-A3D1-9EF501C05B49",
+   "id": "428841A1-FE40-44BD-9C8A-51A70E149984",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "index": 0,
+   "image": "mycourses.png",
+   "image2x": "mycourses@2x.png",
+   "width": 412,
+   "height": 1194,
+   "x": -2086,
+   "y": -447,
+   "title": "MyCourses",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "9D8ADB04-C05D-462F-B632-654AA07EA4CE",
+   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
+   "index": 1,
+   "image": "all_courses_from_series_mycourses.png",
+   "image2x": "all_courses_from_series_mycourses@2x.png",
+   "width": 412,
+   "height": 818,
+   "x": -1650,
+   "y": -447,
+   "title": "All courses from series_MyCourses",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "663440F0-188D-4D5C-A780-92F073A2A0E5",
+   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
+   "index": 2,
    "image": "courseplayer_enrichinglife.png",
    "image2x": "courseplayer_enrichinglife@2x.png",
    "width": 412,
    "height": 640,
-   "x": 59,
-   "y": -11,
+   "x": -1214,
+   "y": -447,
    "title": "CoursePlayer_EnrichingLife",
    "transAnimType": 0,
    "layout": {
@@ -42,15 +88,15 @@ var story = {
    "links": []
   },
   {
-   "id": "07E9E601-1D9E-466F-98EE-EB5B18564175",
+   "id": "0F87607D-6F4E-4714-A5A3-F0FEA9E7582C",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 1,
+   "index": 3,
    "image": "courseplayer_1.2parentalloveonpausemode.png",
    "image2x": "courseplayer_1.2parentalloveonpausemode@2x.png",
    "width": 412,
    "height": 845,
-   "x": 498,
-   "y": -11,
+   "x": -724,
+   "y": -447,
    "title": "CoursePlayer_1.2ParentalLoveOnPauseMode",
    "transAnimType": 0,
    "layout": {
@@ -69,13 +115,9 @@ var story = {
   {
    "id": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "name": "Page 1"
-  },
-  {
-   "id": "3E05552A-C96A-4CAA-B4AA-53D5CDEEFEC1",
-   "name": "Symbols"
   }
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 2
+ "totalImages": 4
 }
