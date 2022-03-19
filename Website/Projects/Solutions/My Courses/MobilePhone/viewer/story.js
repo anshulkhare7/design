@@ -1,5 +1,5 @@
 var story = {
- "docName": "ap-solutions-web",
+ "docName": "web-mycourses-mobile",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,22 +13,22 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "AP solutions web",
+ "title": "Web_Mycourses_Mobile",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
  "pages": [
   {
-   "id": "F6E11C87-FC17-4FC0-B38B-E4E486F8BCB1",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
+   "id": "43EA4062-AE8B-4D19-877D-B7F8264C6FDB",
+   "groupID": "BB2F83E0-824E-4BAD-A431-DAC718D04C55",
    "index": 0,
-   "image": "mycourses1.png",
-   "image2x": "mycourses1@2x.png",
+   "image": "mycourses.png",
+   "image2x": "mycourses@2x.png",
    "width": 412,
-   "height": 1349,
-   "x": 3293,
-   "y": -1941,
-   "title": "MyCourses1",
+   "height": 985,
+   "x": -461,
+   "y": -111,
+   "title": "MyCourses",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -42,16 +42,16 @@ var story = {
    "links": []
   },
   {
-   "id": "077E0354-49D4-436B-874C-45E236494C7A",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
+   "id": "D2DA9008-8A47-47EB-A4C6-AC54B08F4F6F",
+   "groupID": "BB2F83E0-824E-4BAD-A431-DAC718D04C55",
    "index": 1,
-   "image": "mycourses1.1.png",
-   "image2x": "mycourses1.1@2x.png",
+   "image": "all_courses_from_series_mycourses.png",
+   "image2x": "all_courses_from_series_mycourses@2x.png",
    "width": 412,
-   "height": 823,
-   "x": 3758,
-   "y": -1677,
-   "title": "MyCourses1.1",
+   "height": 852,
+   "x": -19,
+   "y": -111,
+   "title": "All courses from series_MyCourses",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -65,15 +65,15 @@ var story = {
    "links": []
   },
   {
-   "id": "8D48BC7C-7676-460D-B510-C3CEF8A4A46A",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
+   "id": "B4AE4A15-3455-4604-8441-3EE2980DC781",
+   "groupID": "BB2F83E0-824E-4BAD-A431-DAC718D04C55",
    "index": 2,
    "image": "mycoursevideo_chapters.png",
    "image2x": "mycoursevideo_chapters@2x.png",
    "width": 412,
    "height": 910,
-   "x": 4207,
-   "y": -1654,
+   "x": 423,
+   "y": -111,
    "title": "MyCourseVideo/chapters",
    "transAnimType": 0,
    "layout": {
@@ -88,15 +88,15 @@ var story = {
    "links": []
   },
   {
-   "id": "F014A129-BAC2-4ABE-A152-0CA61CEBEB1F",
-   "groupID": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
+   "id": "DE0AAA92-78EE-43C0-AF31-9AE0050E90D9",
+   "groupID": "BB2F83E0-824E-4BAD-A431-DAC718D04C55",
    "index": 3,
    "image": "mycoursevideo_chapters_topics.png",
    "image2x": "mycoursevideo_chapters_topics@2x.png",
    "width": 412,
    "height": 1044,
-   "x": 4640,
-   "y": -1660,
+   "x": 865,
+   "y": -111,
    "title": "MyCourseVideo/chapters/topics",
    "transAnimType": 0,
    "layout": {
@@ -113,10 +113,11 @@ var story = {
  ],
  "groups": [
   {
-   "id": "23ACF753-3B0F-4372-8ADB-611A8E4EE167",
-   "name": "ExportMobile"
+   "id": "BB2F83E0-824E-4BAD-A431-DAC718D04C55",
+   "name": "Page 1"
   }
  ],
+ "experimentalExisting": false,
  "startPageIndex": 0,
  "totalImages": 4
 }
