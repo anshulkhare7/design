@@ -249,15 +249,15 @@ var story = {
    "links": []
   },
   {
-   "id": "429ED860-20E9-4E26-828B-E477A1D67413",
+   "id": "323547EC-AA37-4B70-8295-384DB41DA1F8",
    "groupID": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
    "index": 10,
    "image": "home.png",
    "image2x": "home@2x.png",
    "width": 1440,
    "height": 4230,
-   "x": 13577,
-   "y": 741,
+   "x": 13556,
+   "y": 669,
    "title": "Home",
    "transAnimType": 0,
    "layout": {
@@ -362,111 +362,15 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
-  },
-  {
-   "id": "BD97E5B8-474D-4931-A81B-290F032DC8FE",
-   "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 15,
-   "image": "ic_person_placeholder.png",
-   "image2x": "ic_person_placeholder@2x.png",
-   "width": 36,
-   "height": 36,
-   "x": -34,
-   "y": -18,
-   "title": "ic_person_placeholder",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
-   "id": "FE03E7CA-D949-4AD8-95B8-A7D802999E32",
-   "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 16,
-   "image": "ic_close.png",
-   "image2x": "ic_close@2x.png",
-   "width": 13,
-   "height": 13,
-   "x": 20,
-   "y": -18,
-   "title": "ic_close",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
-   "id": "7BDB1CDB-71FF-42FB-A947-A300F61879F5",
-   "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 17,
-   "image": "ic_googleplay.png",
-   "image2x": "ic_googleplay@2x.png",
-   "width": 116,
-   "height": 34,
-   "x": 51,
-   "y": -18,
-   "title": "ic_googleplay",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
-   "id": "8AAE99A8-9964-45B7-A810-9A76FEFBC540",
-   "groupID": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "index": 18,
-   "image": "ic_appstotre.png",
-   "image2x": "ic_appstotre@2x.png",
-   "width": 116,
-   "height": 34,
-   "x": 51,
-   "y": 34,
-   "title": "ic_appstotre",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
   }
  ],
  "groups": [
   {
    "id": "84AA79BF-7F14-4992-BD9E-C39A700575EE",
    "name": "Page 1"
-  },
-  {
-   "id": "2221BEF8-8E3D-4B18-A9B6-6BC9358F85F2",
-   "name": "assets"
   }
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 19
+ "totalImages": 15
 }
