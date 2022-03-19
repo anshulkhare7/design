@@ -48,7 +48,7 @@ var story = {
    "image": "all_courses_from_series_mycourses.png",
    "image2x": "all_courses_from_series_mycourses@2x.png",
    "width": 412,
-   "height": 762,
+   "height": 783,
    "x": -1650,
    "y": -447,
    "title": "All courses from series_MyCourses",
@@ -109,6 +109,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "93F25157-D462-40E1-95C6-D07D68386E11",
+   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
+   "index": 4,
+   "image": "courseplayer_1.2parentalloveonpausemode_copy.png",
+   "image2x": "courseplayer_1.2parentalloveonpausemode_copy@2x.png",
+   "width": 412,
+   "height": 845,
+   "x": -275,
+   "y": -447,
+   "title": "CoursePlayer_1.2ParentalLoveOnPauseMode Copy",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -119,5 +142,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 4
+ "totalImages": 5
 }
