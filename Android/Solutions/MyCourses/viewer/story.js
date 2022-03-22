@@ -178,29 +178,6 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
-  },
-  {
-   "id": "7F831E63-DA6B-4271-ADA9-7DA673CF8880",
-   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 7,
-   "image": "artboard.png",
-   "image2x": "artboard@2x.png",
-   "width": 95,
-   "height": 95,
-   "x": 1127,
-   "y": -231,
-   "title": "Artboard",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
   }
  ],
  "groups": [
@@ -211,5 +188,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 8
+ "totalImages": 7
 }
