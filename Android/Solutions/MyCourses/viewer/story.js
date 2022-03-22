@@ -1,5 +1,5 @@
 var story = {
- "docName": "mycourses",
+ "docName": "mycoursesapp",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,7 +13,7 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "MyCourses",
+ "title": "MyCoursesApp",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
@@ -111,14 +111,14 @@ var story = {
    "links": []
   },
   {
-   "id": "75766DA3-0C07-4081-94FD-ADAC84C20B81",
+   "id": "FC8C47DF-48B5-4A1E-A231-FD56B144FFC0",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "index": 4,
    "image": "courseplayer_introduction_.png",
    "image2x": "courseplayer_introduction_@2x.png",
    "width": 412,
    "height": 1106,
-   "x": -269,
+   "x": -234,
    "y": -447,
    "title": "CoursePlayer_Introduction ",
    "transAnimType": 0,
@@ -134,14 +134,14 @@ var story = {
    "links": []
   },
   {
-   "id": "08A41412-034D-4462-8932-020F0E1DF576",
+   "id": "ED06DADB-B525-49FF-875F-310D162AEBFF",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "index": 5,
    "image": "courseplayer_quiz.png",
    "image2x": "courseplayer_quiz@2x.png",
    "width": 412,
    "height": 995,
-   "x": 200,
+   "x": 235,
    "y": -447,
    "title": "CoursePlayer_quiz",
    "transAnimType": 0,
@@ -157,16 +157,39 @@ var story = {
    "links": []
   },
   {
-   "id": "2E7F8227-AB90-4257-BB23-286F430490D0",
+   "id": "E5D08634-C4A5-44AA-8EBD-739134C52F81",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "index": 6,
    "image": "courseplayer_more.png",
    "image2x": "courseplayer_more@2x.png",
    "width": 412,
    "height": 769,
-   "x": 647,
+   "x": 682,
    "y": -447,
    "title": "CoursePlayer_more",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "7F831E63-DA6B-4271-ADA9-7DA673CF8880",
+   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
+   "index": 7,
+   "image": "artboard.png",
+   "image2x": "artboard@2x.png",
+   "width": 95,
+   "height": 95,
+   "x": 1127,
+   "y": -231,
+   "title": "Artboard",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -188,5 +211,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 7
+ "totalImages": 8
 }
