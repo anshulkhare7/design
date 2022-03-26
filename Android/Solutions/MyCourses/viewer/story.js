@@ -19,39 +19,16 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "7B6B44D8-0F36-48B2-9D80-E15154E8F5EC",
+   "id": "2B687519-3865-485D-86ED-701F7056DA22",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
    "index": 0,
-   "image": "mycourses.png",
-   "image2x": "mycourses@2x.png",
+   "image": "mycourses_home.png",
+   "image2x": "mycourses_home@2x.png",
    "width": 412,
-   "height": 1432,
+   "height": 2586,
    "x": -2105,
    "y": -447,
-   "title": "MyCourses",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
-   "id": "9D8ADB04-C05D-462F-B632-654AA07EA4CE",
-   "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 1,
-   "image": "all_courses_from_series_mycourses.png",
-   "image2x": "all_courses_from_series_mycourses@2x.png",
-   "width": 412,
-   "height": 783,
-   "x": -1650,
-   "y": -447,
-   "title": "All courses from series_MyCourses",
+   "title": "MyCourses_Home",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -67,7 +44,7 @@ var story = {
   {
    "id": "663440F0-188D-4D5C-A780-92F073A2A0E5",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 2,
+   "index": 1,
    "image": "courseplayer_enrichinglife.png",
    "image2x": "courseplayer_enrichinglife@2x.png",
    "width": 412,
@@ -90,7 +67,7 @@ var story = {
   {
    "id": "0F87607D-6F4E-4714-A5A3-F0FEA9E7582C",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 3,
+   "index": 2,
    "image": "courseplayer_1.2parentalloveonpausemode.png",
    "image2x": "courseplayer_1.2parentalloveonpausemode@2x.png",
    "width": 412,
@@ -113,7 +90,7 @@ var story = {
   {
    "id": "FC8C47DF-48B5-4A1E-A231-FD56B144FFC0",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 4,
+   "index": 3,
    "image": "courseplayer_introduction_.png",
    "image2x": "courseplayer_introduction_@2x.png",
    "width": 412,
@@ -134,16 +111,16 @@ var story = {
    "links": []
   },
   {
-   "id": "ED06DADB-B525-49FF-875F-310D162AEBFF",
+   "id": "74FC1EEA-18AA-422A-B1F5-AB3F2BE04D17",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 5,
-   "image": "courseplayer_quiz.png",
-   "image2x": "courseplayer_quiz@2x.png",
+   "index": 4,
+   "image": "courseplayer_reading.png",
+   "image2x": "courseplayer_reading@2x.png",
    "width": 412,
-   "height": 995,
-   "x": 235,
-   "y": -447,
-   "title": "CoursePlayer_quiz",
+   "height": 689,
+   "x": 211,
+   "y": -1231,
+   "title": "CoursePlayer_Reading",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -159,12 +136,12 @@ var story = {
   {
    "id": "E5D08634-C4A5-44AA-8EBD-739134C52F81",
    "groupID": "A3D5715F-DBEC-4A34-A303-172207D82200",
-   "index": 6,
+   "index": 5,
    "image": "courseplayer_more.png",
    "image2x": "courseplayer_more@2x.png",
    "width": 412,
    "height": 769,
-   "x": 682,
+   "x": 656,
    "y": -447,
    "title": "CoursePlayer_more",
    "transAnimType": 0,
@@ -188,5 +165,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 7
+ "totalImages": 6
 }
