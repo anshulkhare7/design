@@ -63,6 +63,52 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "43984A0C-304D-43AB-A599-86EC8580B97A",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 2,
+   "image": "coursepage_introductionopen.png",
+   "image2x": "coursepage_introductionopen@2x.png",
+   "width": 412,
+   "height": 1073,
+   "x": 770,
+   "y": -759,
+   "title": "CoursePage_IntroductionOpen",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "E6EEDD93-98B6-4174-A71D-9CF03BCD237A",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 3,
+   "image": "coursepage_contentopen.png",
+   "image2x": "coursepage_contentopen@2x.png",
+   "width": 412,
+   "height": 1187,
+   "x": 1229,
+   "y": -759,
+   "title": "CoursePage_ContentOpen",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -73,5 +119,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 2
+ "totalImages": 4
 }
