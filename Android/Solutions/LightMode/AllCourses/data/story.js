@@ -109,6 +109,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "EC373340-EDDD-4D99-B664-A9ED825060FB",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 4,
+   "image": "seriespage.png",
+   "image2x": "seriespage@2x.png",
+   "width": 412,
+   "height": 2057,
+   "x": 1688,
+   "y": -759,
+   "title": "SeriesPage",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -119,5 +142,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 4
+ "totalImages": 5
 }
