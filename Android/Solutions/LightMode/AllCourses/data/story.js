@@ -155,6 +155,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "B66724EE-E9C7-4462-9329-28C1D6C655D4",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 6,
+   "image": "searchresultpage.png",
+   "image2x": "searchresultpage@2x.png",
+   "width": 412,
+   "height": 1907,
+   "x": 2606,
+   "y": -759,
+   "title": "SearchResultPage",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -165,5 +188,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 6
+ "totalImages": 7
 }
