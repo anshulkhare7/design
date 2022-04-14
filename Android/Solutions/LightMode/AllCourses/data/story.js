@@ -117,7 +117,7 @@ var story = {
    "image": "seriespage.png",
    "image2x": "seriespage@2x.png",
    "width": 412,
-   "height": 2057,
+   "height": 1726,
    "x": 1688,
    "y": -759,
    "title": "SeriesPage",
