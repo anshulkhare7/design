@@ -132,6 +132,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "E501ED27-B905-4F30-9E20-BAAE166E17DB",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 5,
+   "image": "topicpage_whenusertapontag.png",
+   "image2x": "topicpage_whenusertapontag@2x.png",
+   "width": 412,
+   "height": 754,
+   "x": 2147,
+   "y": -759,
+   "title": "TopicPage_whenUserTapOnTag",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -142,5 +165,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 5
+ "totalImages": 6
 }
