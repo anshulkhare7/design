@@ -178,6 +178,29 @@ var story = {
    "type": "regular",
    "fixedPanels": [],
    "links": []
+  },
+  {
+   "id": "AF06009B-15FD-4CC6-B765-5416A0F1BC9D",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 7,
+   "image": "mycart.png",
+   "image2x": "mycart@2x.png",
+   "width": 412,
+   "height": 803,
+   "x": 3065,
+   "y": -759,
+   "title": "MyCart",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
   }
  ],
  "groups": [
@@ -188,5 +211,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 7
+ "totalImages": 8
 }
