@@ -26,8 +26,8 @@ var story = {
    "image2x": "allcourseshome_when1collection@2x.png",
    "width": 412,
    "height": 2177,
-   "x": -236,
-   "y": -759,
+   "x": -869,
+   "y": -775,
    "title": "AllCoursesHome_when1Collection",
    "transAnimType": 0,
    "layout": {
@@ -49,9 +49,32 @@ var story = {
    "image2x": "allcourseshome_whenmorethan1collection@2x.png",
    "width": 412,
    "height": 2146,
+   "x": -366,
+   "y": -775,
+   "title": "AllCoursesHome_whenMoreThan1Collection",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "D0CDF5E9-ABEA-44BA-9D61-FBD9507675AA",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 2,
+   "image": "collection_home.png",
+   "image2x": "collection_home@2x.png",
+   "width": 412,
+   "height": 1133,
    "x": 267,
    "y": -759,
-   "title": "AllCoursesHome_whenMoreThan1Collection",
+   "title": "Collection home",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -67,11 +90,11 @@ var story = {
   {
    "id": "43984A0C-304D-43AB-A599-86EC8580B97A",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 2,
+   "index": 3,
    "image": "coursepage_introductionopen.png",
    "image2x": "coursepage_introductionopen@2x.png",
    "width": 412,
-   "height": 1073,
+   "height": 1468,
    "x": 770,
    "y": -759,
    "title": "CoursePage_IntroductionOpen",
@@ -90,7 +113,7 @@ var story = {
   {
    "id": "E6EEDD93-98B6-4174-A71D-9CF03BCD237A",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 3,
+   "index": 4,
    "image": "coursepage_contentopen.png",
    "image2x": "coursepage_contentopen@2x.png",
    "width": 412,
@@ -113,11 +136,11 @@ var story = {
   {
    "id": "EC373340-EDDD-4D99-B664-A9ED825060FB",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 4,
+   "index": 5,
    "image": "seriespage.png",
    "image2x": "seriespage@2x.png",
    "width": 412,
-   "height": 1726,
+   "height": 1625,
    "x": 1688,
    "y": -759,
    "title": "SeriesPage",
@@ -136,7 +159,7 @@ var story = {
   {
    "id": "E501ED27-B905-4F30-9E20-BAAE166E17DB",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 5,
+   "index": 6,
    "image": "topicpage_whenusertapontag.png",
    "image2x": "topicpage_whenusertapontag@2x.png",
    "width": 412,
@@ -159,7 +182,7 @@ var story = {
   {
    "id": "B66724EE-E9C7-4462-9329-28C1D6C655D4",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 6,
+   "index": 7,
    "image": "searchresultpage.png",
    "image2x": "searchresultpage@2x.png",
    "width": 412,
@@ -182,7 +205,7 @@ var story = {
   {
    "id": "AF06009B-15FD-4CC6-B765-5416A0F1BC9D",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 7,
+   "index": 8,
    "image": "mycart.png",
    "image2x": "mycart@2x.png",
    "width": 412,
@@ -211,5 +234,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 8
+ "totalImages": 9
 }
