@@ -19,9 +19,32 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "75748C4B-C388-493D-80F9-303DD84427C3",
+   "id": "CCA87331-4F46-4287-B550-66BB105D6004",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
    "index": 0,
+   "image": "allcourseshome_when1collection.png",
+   "image2x": "allcourseshome_when1collection@2x.png",
+   "width": 412,
+   "height": 2177,
+   "x": -2994,
+   "y": 2114,
+   "title": "AllCoursesHome_when1Collection",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "75748C4B-C388-493D-80F9-303DD84427C3",
+   "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
+   "index": 1,
    "image": "mycourses_darkmode.png",
    "image2x": "mycourses_darkmode@2x.png",
    "width": 412,
@@ -44,7 +67,7 @@ var story = {
   {
    "id": "0A01A954-3D95-4AC4-8317-C3DB49B5B121",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 1,
+   "index": 2,
    "image": "coursepage_comesfromseriescourse.png",
    "image2x": "coursepage_comesfromseriescourse@2x.png",
    "width": 412,
@@ -67,7 +90,7 @@ var story = {
   {
    "id": "B2A5F0CE-5D3D-4851-A25C-64EB2F206715",
    "groupID": "F2459D88-8FA0-4995-8D9A-9AAD75E3359A",
-   "index": 2,
+   "index": 3,
    "image": "seriespage.png",
    "image2x": "seriespage@2x.png",
    "width": 412,
@@ -96,5 +119,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 3
+ "totalImages": 4
 }
