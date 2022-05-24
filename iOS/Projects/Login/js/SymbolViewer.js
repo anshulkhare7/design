@@ -21,16 +21,21 @@ const SUPPORT_TYPES = ["Text", "ShapePath", "Image", "ImageSymbol"]
 
 class SymbolViewer extends AbstractViewer {
     constructor() {
-        super()
+        super("symbol_viewer")
+        //
+        this.preventCustomTextSearch = true
+        //
         this.createdPages = {}
         //this.symbolIDs = {} // layer indexes ( in pages[].layers ) of symbols
         this.currentLib = ""
         this.selected = null
         this.showSymbols = false
+        this.insideExpViewer = false
+        this.highlightWidgetName = null
     }
 
-    initialize(force = false) {
-        if (!force && this.inited) return
+    initialize (force = false) {
+        if (!super.initialize(force)) return
 
         // populate library select
         const libSelect = $('#symbol_viewer #lib_selector')
@@ -55,11 +60,9 @@ class SymbolViewer extends AbstractViewer {
             viewer.symbolViewer._setSymCheck($(this).is(':checked'))
 
         })
-
-        this.inited = true
     }
 
-    _setSymCheck(showSymbols) {
+    _setSymCheck (showSymbols) {
         this.showSymbols = showSymbols
         $('#lib_selector').toggle()
         this._reShowContent()
@@ -67,16 +70,16 @@ class SymbolViewer extends AbstractViewer {
     }
 
     // called by Viewer
-    pageChanged() {
+    pageChanged () {
         this._reShowContent()
     }
 
-    _selectLib(libName) {
+    _selectLib (libName) {
         this.currentLib = libName
         this._reShowContent()
     }
 
-    _reShowContent() {
+    _reShowContent () {
         delete this.createdPages[viewer.currentPage.index]
 
         // remove existing symbol links        
@@ -97,13 +100,26 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    toggle() {
+    toggle () {
         return this.visible ? this.hide() : this.show()
     }
 
+    hide () {
+        super.hide()
+        if (this.insideExpViewer) {
+            this.insideExpViewer = false
+            viewer.expViewer.show()
+        }
+        this.highlightWidgetName = null
+    }
 
+    showFromExpViewer (highlightWidgetName = null) {
+        this.insideExpViewer = true
+        this.highlightWidgetName = highlightWidgetName
+        this.show()
+    }
 
-    _hideSelf() {
+    _hideSelf () {
         var isModal = viewer.currentPage && viewer.currentPage.isModal
         if (isModal) {
             $(".modalSymbolLink").remove()
@@ -120,12 +136,12 @@ class SymbolViewer extends AbstractViewer {
         super._hideSelf()
     }
 
-    onContentClick() {
+    onContentClick () {
         this.setSelected(null)
         return true
     }
 
-    handleKeyDown(jevent) {
+    handleKeyDown (jevent) {
 
         const event = jevent.originalEvent
 
@@ -140,7 +156,7 @@ class SymbolViewer extends AbstractViewer {
         return true
     }
 
-    handleKeyDownWhileInactive(jevent) {
+    handleKeyDownWhileInactive (jevent) {
         const event = jevent.originalEvent
 
         if (77 == event.which) { // m
@@ -154,7 +170,7 @@ class SymbolViewer extends AbstractViewer {
         return true
     }
 
-    _showSelf() {
+    _showSelf () {
         if (!this.inited) this.initialize()
 
         viewer.toggleLinks(false)
@@ -175,13 +191,17 @@ class SymbolViewer extends AbstractViewer {
 
     }
 
-    _showEmptyContent() {
+    _showEmptyContent () {
         $("#symbol_viewer_content").html("")
+        $('#symbol_viewer #empty').html(story.experimentalExisting ?
+            "Click any element to inspect.<br/>EXPERIMENTAL widgets are in <span style='color:orange'>orange</span>." :
+            "Click any element to inspect"
+        );
         $('#symbol_viewer #empty').removeClass("hidden")
     }
 
 
-    _buildElementLinks() {
+    _buildElementLinks () {
         this._buildElementLinksForPage(viewer.currentPage)
         for (let overlay of viewer.currentPage.currentOverlays) {
             this._buildElementLinksForPage(overlay)
@@ -189,7 +209,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _buildElementLinksForPage(page) {
+    _buildElementLinksForPage (page) {
         var pageIndex = page.index
         this.pageIndex = pageIndex
         this.page = page
@@ -215,7 +235,7 @@ class SymbolViewer extends AbstractViewer {
         }
     }
 
-    _processSymbolList(layers, isParentSymbol = false) {
+    _processSymbolList (layers, isParentSymbol = false) {
         for (var l of layers.slice().reverse()) {
             // l.b: library name
             if (
@@ -236,17 +256,21 @@ class SymbolViewer extends AbstractViewer {
         }
     }
 
-    _processLayerList(layers, sSI = null) {
+    _processLayerList (layers, sSI = null) {
         for (var l of layers.slice().reverse()) {
-            if (SUPPORT_TYPES.indexOf(l.tp) >= 0 && !l.hd) {
+            const isIcon = l.s && l.s.indexOf(ICON_TAG) > 0;
+            if (isIcon || (SUPPORT_TYPES.indexOf(l.tp) >= 0 && !l.hd)) {
                 this._showElement(l, sSI)
             }
+            // don't go deep inside an icon
+            if (isIcon) continue
+            // process childs
             if (undefined != l.c)
                 this._processLayerList(l.c, "SI" == l.tp ? l : sSI)
         }
     }
 
-    _showElement(l, siLayer = null) {
+    _showElement (l, siLayer = null) {
         if (l.hd) return
 
         var currentPanel = this.page
@@ -320,6 +344,7 @@ class SymbolViewer extends AbstractViewer {
             const styleInfo = styleName != undefined ? viewer.symbolViewer._findStyleAndLibByStyleName(styleName) : undefined
             const symInfo = symName != undefined ? viewer.symbolViewer._findSymbolAndLibBySymbolName(symName) : undefined
 
+            sv.docLinkAdded = false
             var info = ""
             // layer.b : shared library name, owner of style or symbol
             // layer.s : symbol name
@@ -375,8 +400,12 @@ class SymbolViewer extends AbstractViewer {
 
         var style = "left: " + l.finalX + "px; top:" + l.finalY + "px; "
         style += "width: " + l.w + "px; height:" + l.h + "px; "
+        const highlight = siLayer && siLayer.s && (
+            (this.highlightWidgetName === null && siLayer.s.includes("EXPERIMENTAL")) ||
+            (this.highlightWidgetName !== null && siLayer.s.includes(this.highlightWidgetName))
+        )
         var symbolDiv = $("<div>", {
-            class: "symbolDiv",
+            class: "symbolDiv" + (highlight ? " exp" : ""),
         }).attr('style', style)
         symbolDiv.mouseenter(function () {
             viewer.symbolViewer.mouseEnterLayerDiv($(this))
@@ -385,7 +414,7 @@ class SymbolViewer extends AbstractViewer {
         symbolDiv.appendTo(a)
     }
 
-    _mergeTokens(list1, list2) {
+    _mergeTokens (list1, list2) {
         let adding = []
         list2.forEach(function (t2) {
             const res1 = list1.filter(t1 => t1[0] == t2[0])
@@ -398,7 +427,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
     // Show Text layer content with Copy button
-    _showLayerTextContent(layer, decRes) {
+    _showLayerTextContent (layer, decRes) {
         if (layer.tx == undefined || layer.tx == "") return ""
         let info = ""
 
@@ -426,13 +455,13 @@ class SymbolViewer extends AbstractViewer {
         return info
     }
 
-    _showLayerSymbol(layer, symName, siLayer) {
+    _showLayerSymbol (layer, symName, siLayer) {
         if (undefined == symName) return ""
         let categoryName = viewer.figma ? "Figma component" : "Sketch Symbol"
         // Drop path to icon, leave only name
         const iconTagPos = symName.indexOf(ICON_TAG)
         if (iconTagPos >= 0) {
-            symName = symName.substring(iconTagPos).replace(ICON_TAG, ICON_TAG2)
+            symName = symName.substring(iconTagPos).replace(ICON_TAG, ICON_TAG2) + "-" + symName.substring(0, 2)
             categoryName = "Icon"
         }
         //
@@ -446,8 +475,9 @@ class SymbolViewer extends AbstractViewer {
         return this._showExtDocRef(layer, symName, siLayer) + info
     }
 
-    _showExtDocRef(layer, symName, siLayer) {
+    _showExtDocRef (layer, symName, siLayer) {
         const emptyRes = ""
+        if (this.docLinkAdded) return emptyRes
         if (undefined == layer.b && (undefined == siLayer || undefined == siLayer.b)) return emptyRes
         //
         let href = undefined
@@ -474,6 +504,9 @@ class SymbolViewer extends AbstractViewer {
         }
         if (!href) return emptyRes
         //        
+        name = name.replace("_atoms/", "")
+        if (href.toLowerCase().includes("experimental") && !name.toLowerCase().includes("experimental")) name += "-EXPERIMENTAL"
+        this.docLinkAdded = true
         return `
                 <hr>
                 <div class="block">
@@ -482,7 +515,7 @@ class SymbolViewer extends AbstractViewer {
                 </div>`
     }
 
-    _showLayerComment(layer) {
+    _showLayerComment (layer) {
         var comment = layer.comment
         if (undefined == comment) return ""
 
@@ -494,7 +527,7 @@ class SymbolViewer extends AbstractViewer {
                 </div>`
     }
 
-    _showLayerImage(layer) {
+    _showLayerImage (layer) {
         let info = ""
         const url = layer.iu
         info += `
@@ -508,7 +541,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
     // siLayer: parent symbol 
-    _showLayerStyle(layer, siLayer) {
+    _showLayerStyle (layer, siLayer) {
         if (undefined == layer.l) return ""
 
         let info = ""
@@ -526,7 +559,7 @@ class SymbolViewer extends AbstractViewer {
         return this._showExtDocRef(layer, styleName, siLayer) + info
     }
 
-    _showLayerDimensions(layer) {
+    _showLayerDimensions (layer) {
         let info = ""
 
         var frameX = layer.finalX
@@ -555,7 +588,7 @@ class SymbolViewer extends AbstractViewer {
         return info
     }
 
-    setSelected(event = null, layer = null, a = null, force = false) {
+    setSelected (event = null, layer = null, a = null, force = false) {
         const prevClickedLayer = this.lastClickedLayer
         this.lastClickedLayer = layer
         //
@@ -625,7 +658,7 @@ class SymbolViewer extends AbstractViewer {
         )
     }
 
-    findOtherSelection(click, layers, foundLayers) {
+    findOtherSelection (click, layers, foundLayers) {
         if (null == layers) layers = layersData[this.pageIndex].c
 
         if (undefined == layers) return
@@ -642,7 +675,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    mouseEnterLayerDiv(div) {
+    mouseEnterLayerDiv (div) {
         // get a layer under mouse 
         const a = div.parent()
         const sv = viewer.symbolViewer
@@ -667,7 +700,7 @@ class SymbolViewer extends AbstractViewer {
         this._drawRightHMargin(slayer.parentPanel, layer, slayer)
     }
 
-    _drawLeftHMargin(currentPanel, layer, slayer) {
+    _drawLeftHMargin (currentPanel, layer, slayer) {
         let hmargin = 0
         let x = null
         if (layer.finalX == slayer.finalX) {
@@ -695,7 +728,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _drawRightHMargin(currentPanel, layer, slayer) {
+    _drawRightHMargin (currentPanel, layer, slayer) {
         let hmargin = 0
         let x = null
 
@@ -727,7 +760,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _drawTopVMargin(currentPanel, layer, slayer) {
+    _drawTopVMargin (currentPanel, layer, slayer) {
         let vmargin = 0
         let y = null
         if (layer.finalY == slayer.finalY) {
@@ -754,7 +787,7 @@ class SymbolViewer extends AbstractViewer {
         }
     }
 
-    _drawBottomVMargin(currentPanel, layer, slayer) {
+    _drawBottomVMargin (currentPanel, layer, slayer) {
         let vmargin = 0
         let y = null
 
@@ -786,26 +819,26 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _findLayersCenterX(l, sl) {
+    _findLayersCenterX (l, sl) {
         let c = l.finalX + l.w / 2
         let sc = sl.finalX + sl.w / 2
         return sl.finalX > l.finalX && ((sl.finalX + sl.w) < (l.finalX + l.w)) ? sc : c
     }
 
-    _findLayersCenterY(l, sl) {
+    _findLayersCenterY (l, sl) {
         let c = l.finalY + l.h / 2
         let sc = sl.finalY + sl.h / 2
         return sl.finalY > l.finalY && ((sl.finalY + sl.h) < (l.finalY + l.h)) ? sc : c
     }
 
-    _drawMarginLine(currentPanel, x, y, width, height, className) {
+    _drawMarginLine (currentPanel, x, y, width, height, className) {
         var style = "left: " + x + "px; top:" + y + "px; "
         style += "width: " + width + "px; height:" + height + "px; "
         var div = $("<div>", { class: className }).attr('style', style)
         div.appendTo(currentPanel.linksDiv)
         return div
     }
-    _drawMarginValue(currentPanel, x, y, value) {
+    _drawMarginValue (currentPanel, x, y, value) {
         const valueHeight = 20
         const valueWidth = 30
         var style = "left: " + (x - valueWidth / 2) + "px; top:" + (y - valueHeight / 2) + "px; "
@@ -820,7 +853,7 @@ class SymbolViewer extends AbstractViewer {
         return div
     }
 
-    _decorateCSS(layer, tokens, siLayer) {
+    _decorateCSS (layer, tokens, siLayer) {
         let css = layer.pr
         let result = ""
         let styles = {}
@@ -844,6 +877,8 @@ class SymbolViewer extends AbstractViewer {
             styles[styleName] = styleValue
 
         }, this);
+        // Add missed CSS styles based on tokens
+        result += this._decorateCSSLostTokens(tokens, styles, layer, siLayer)
         // Decorate non-CSS common styles
         result += this._decorateCSSOtherTokens(tokens, layer, siLayer)
 
@@ -853,7 +888,7 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _decorateCSSOneStyle(tokens, layer, siLayer, styleName, styleValue) {
+    _decorateCSSOneStyle (tokens, layer, siLayer, styleName, styleValue) {
         let result = ""
         result += "" + styleName + ": "
         result += "<span class='tokenName'>"
@@ -869,6 +904,7 @@ class SymbolViewer extends AbstractViewer {
         }
         if (null == cvTokens) {
             const tokenStr = tokens != null ? this._decorateStyleToken(styleName, tokens, siLayer, styleValue) : ""
+            if (tokenStr === undefined) return ""
             result += tokenStr != "" ? tokenStr : (this._formatStyleValue(styleName, styleValue) + ";")
         }
         //
@@ -877,40 +913,60 @@ class SymbolViewer extends AbstractViewer {
         return result
     }
 
-    _decorateCSSOtherTokens(tokens, layer, siLayer) {
+    _decorateCSSLostTokens (tokens, styles, layer, siLayer) {
         if (null == tokens) return ""
         let result = ""
-        const knownOtherStyles = ["width", "height"]
+        const knownOtherStyles = ["width2", "height2"]
+        const reversed = tokens.slice().reverse()
+        const processed = {}
+        tokens.filter(token => !(token[0] in styles) && knownOtherStyles.indexOf(token[0]) < 0).forEach(token => {
+            if (token[0] != "background-color" && (token[0] in processed)) return
+            processed[token[0]] = true
+            result += this._decorateCSSOneStyle(tokens, layer, siLayer, token[0], token[1])
+        }, this)
+        return result
+    }
+
+    _decorateCSSOtherTokens (tokens, layer, siLayer) {
+        if (null == tokens) return ""
+        let result = ""
+        const knownOtherStyles = ["width2", "height2"]
         tokens.filter(t => knownOtherStyles.indexOf(t[0]) >= 0 || t[0].startsWith("margin") || t[0].startsWith("padding")).forEach(function (token) {
             result += this._decorateCSSOneStyle(tokens, layer, siLayer, token[0], token[1])
         }, this)
         return result
     }
 
-    _decorateSwatchToken(tokens, styleValue) {
+    _decorateSwatchToken (tokens, styleValue) {
         const tokenName = tokens[0][1]
         //
         return tokenName + ";</span><span class='tokenValue'>//" + styleValue
     }
 
-    _decorateStyleToken(style, tokens, siLayer, styleValue) {
+    _decorateStyleToken (style, tokens, siLayer, styleValue) {
         // search tokan name by style name 
         const foundTokens = tokens.filter(t => t[0] == style)
         if (!foundTokens.length) return ""
         const tokenName = foundTokens[foundTokens.length - 1][1]
         //
-        const libName = undefined != siLayer.b ? siLayer.b : story.docName
+        const libName = siLayer && undefined != siLayer.b ? siLayer.b : story.docName
         const finalTokenInfo = this._findTokenValueByName(tokenName, libName, styleValue)
         //
         if (finalTokenInfo)
             return finalTokenInfo[0] + ";</span><span class='tokenValue'>//" + this._formatStyleValue(style, finalTokenInfo[1])
         else if (foundTokens[0].length == 3)
             return tokenName + ";</span><span class='tokenValue'>//" + foundTokens[0][2]
-        else
+        else if (foundTokens[0].length == 2) {
+            if (foundTokens[0][1].includes("@"))
+                return undefined
+            else
+                return tokenName + ";</span><span class='tokenValue'>//" + foundTokens[0][1]
+        } else
             return ""
+
     }
 
-    _formatStyleValue(style = "font-size", styleValue = "13px") {
+    _formatStyleValue (style = "font-size", styleValue = "13px") {
         if ("font-size" == style && 1 == story.fontSizeFormat) {
             if (styleValue in ELEMENTINSPECTOR_LINUX_FONT_SIZES) {
                 styleValue = ELEMENTINSPECTOR_LINUX_FONT_SIZES[styleValue]
@@ -922,13 +978,13 @@ class SymbolViewer extends AbstractViewer {
     }
 
 
-    _showTextPropery(propName, propValue, postfix = "") {
+    _showTextPropery (propName, propValue, postfix = "") {
         let text = propName + ": " + propValue + postfix + ";"
         return text + "<br/>"
     }
 
     // result: undefined or [tokenName,tokenValue]
-    _findTokenValueByName(tokenName, libName, styleValue = null) {
+    _findTokenValueByName (tokenName, libName, styleValue = null) {
         const lib = TOKENS_DICT[libName]
         if (undefined == lib) return undefined
         let value = lib[tokenName]
@@ -952,7 +1008,7 @@ class SymbolViewer extends AbstractViewer {
         ]
     }
 
-    _findSymbolAndLibBySymbolName(symName) {
+    _findSymbolAndLibBySymbolName (symName) {
         for (const libName of Object.keys(SYMBOLS_DICT)) {
             const lib = SYMBOLS_DICT[libName]
             if (!(symName in lib)) continue
@@ -965,7 +1021,7 @@ class SymbolViewer extends AbstractViewer {
         return undefined
     }
 
-    _findStyleAndLibByStyleName(styleName) {
+    _findStyleAndLibByStyleName (styleName) {
         for (const libName of Object.keys(SYMBOLS_DICT)) {
             const lib = SYMBOLS_DICT[libName]
             if (!("styles" in lib) || !(styleName in lib.styles)) continue
@@ -982,7 +1038,7 @@ class SymbolViewer extends AbstractViewer {
     //   sn: swatch name
     //   ln:  lib name
     // }
-    _findSwatchTokens(cv) {
+    _findSwatchTokens (cv) {
         const lib = SYMBOLS_DICT[cv.ln]
         if (!lib) {
             console.log("Can not find lib " + cv.ln)

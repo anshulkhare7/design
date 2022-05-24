@@ -121,6 +121,7 @@ class Viewer {
         this.highlightLinks = story.highlightLinks
         this.showLayout = false
         this.showUI = true
+        this.isFullScreen = false
         this.isEmbed = false
         this.figma = false
 
@@ -139,6 +140,7 @@ class Viewer {
         this.backStack = []
         this.urlLastIndex = -1
         this.urlLocked = false
+        this.stateChangeIgnore = false
         this.files = files
         this.userStoryPages = []
         this.visStoryPages = []
@@ -148,10 +150,12 @@ class Viewer {
         this.sidebarVisible = false
         this.child = null // some instance of Viewer
         this.allChilds = [] // list of all inited instances of Viewer
+
         this.symbolViewer = null
         this.infoViewer = null
         this.commentsViewer = null
         this.presenterViewer = null
+        this.expViewer = null
 
         this.defSidebarWidth = 400
 
@@ -172,7 +176,7 @@ class Viewer {
 
         if (story.layersExist) {
             this.symbolViewer = new SymbolViewer()
-
+            if (story.experimentalExisting) this.expViewer = new ExpViewer()
         }
         this.infoViewer = new infoViewer()
         this.presenterViewer = new PresenterViewer()
@@ -180,6 +184,10 @@ class Viewer {
         if (story.commentsURL != 'V_V_C' && story.commentsURL != "") {
             this.commentsViewer = new CommentsViewer()
             $("#nav #pageComments").removeClass("hidden")
+        }
+
+        if (story.experimentalExisting) {
+            $("#nav #experimental").removeClass("hidden")
         }
 
     }
@@ -206,16 +214,23 @@ class Viewer {
         });
         jQuery(window).resize(function () { viewer.zoomContent() });
 
-        if (this.urlParams.get('v') != null && this.infoViewer) {
-            this.infoViewer.toggle()
-        }
-        if (this.urlParams.get('c') != null && this.commentsViewer) {
-            this.commentsViewer.toggle()
-        }
+        // Activate galleryViewer
         const gParam = this.urlParams.get('g')
+        const av = this.urlParams.get('av')
         if (gParam != null && this.galleryViewer) {
             this.galleryViewer.handleURLParam(gParam)
             this.galleryViewer.show()
+        } else if (this.urlParams.get('v') != null && this.infoViewer) {
+            // Activate Changes Inspector
+            this.infoViewer.toggle()
+        } else if (this.urlParams.get('c') != null && this.commentsViewer) {
+            // Activate Comment Viewer
+            this.commentsViewer.toggle()
+        } else if (av != null && av === "exp" && this.expViewer) {
+            const widgetName = this.urlParams.get('expn')
+            if (widgetName !== null) this.expViewer.highlightWidget(decodeURIComponent(widgetName))
+            // Activate Experimental Viewer widget
+            this.expViewer.toggle()
         }
     }
 
@@ -301,9 +316,9 @@ class Viewer {
             v.next()
         } else if (allowNavigation && (8 == event.which || 37 == event.which)) { // backspace OR left
             v.previous()
-        } else if (allowNavigation && story.layersExist && event.metaKey && (70 == event.which)) { // Cmd+F
+        } else if (allowNavigation && story.layersExist && event.metaKey && (70 == event.which) && (!this.child || !this.child.customTextSearchPrevented())) { // Cmd+F
             this.showTextSearch()
-        } else if (allowNavigation && story.layersExist && event.metaKey && (71 == event.which)) { // Cmd+G -> Next search
+        } else if (allowNavigation && story.layersExist && event.metaKey && (71 == event.which) && (!this.child || !this.child.customTextSearchPrevented())) { // Cmd+G -> Next search
             this.currentPage.findTextNext()
         } else if (allowNavigation && (16 == event.which)) { // shift
             if (!jevent.metaKey) {  // no cmd to allow user to make a screenshot on macOS
@@ -321,6 +336,8 @@ class Viewer {
             v.toogleLayout();
         } else if (allowNavigation && 78 == event.which) { // n
             v.toogleUI();
+        } else if (70 == event.which) { // f
+            v.toogleFullScreen()
         } else if (enableTopNavigation && 83 == event.which) { // s
             var first = null != story.startPageIndex ? story.pages[story.startPageIndex] : v.getFirstUserPage()
             if (first && (first.index != v.currentPage.index || this.child)) {
@@ -475,7 +492,7 @@ class Viewer {
 
 
     toggleZoom(newState = undefined, updateToogler = true) {
-        this.zoomEnabled = newState === undefined ? newState : !this.zoomEnabled
+        this.zoomEnabled = newState !== undefined ? newState : !this.zoomEnabled
         if (updateToogler) $("#menu #zoom").prop('checked', this.zoomEnabled)
         this.zoomContent()
     }
@@ -616,13 +633,16 @@ class Viewer {
 
     goBack() {
         if (this.backStack.length > 0) {
-            this.goTo(this.backStack[this.backStack.length - 1]);
-            this.backStack.shift();
+            this.goTo(this.backStack[this.backStack.length - 1], true, undefined, false);
+            this.backStack.pop();
         } else if (this.currentPage.isModal && this.lastRegularPage) {
-            this.goTo(this.lastRegularPage.index);
+            this.goTo(this.lastRegularPage.index, true, undefined, false);
         } else {
             window.history.back();
         }
+    }
+    closeModal() {
+        return this.goBack()
     }
     goToPage(page, searchText) {
         this.clear_context();
@@ -634,7 +654,7 @@ class Viewer {
         }
     }
 
-    goTo(page, refreshURL = true, link = undefined) {
+    goTo(page, refreshURL = true, link = undefined, incBackStack = true) {
 
         var index = this.getPageIndex(page);
         var newPage = story.pages[index];
@@ -650,7 +670,7 @@ class Viewer {
         //if(this.symbolViewer) this.symbolViewer.hide()
         var currentPage = this.currentPage
 
-        if (currentPage && !currentPage.isModal) {
+        if (incBackStack && currentPage && !currentPage.isModal) {
             this.backStack.push(currentPage.index);
         }
 
@@ -998,7 +1018,7 @@ class Viewer {
         }
         // If the current page is modal then close it and go to the last non-modal page
         if (this.currentPage.isModal) {
-            viewer.goBack()
+            viewer.closeModal()
             return true
         }
         return false
@@ -1053,6 +1073,13 @@ class Viewer {
         } else
             div.removeClass("contentLayoutVisible")
     }
+    toogleFullScreen(newState = undefined, updateToogler = true) {
+        this.isFullScreen = newState != undefined ? newState : !this.isFullScreen
+        if (updateToogler) $("#menu #fullScreen").prop('checked', this.isFullScreen);
+        //
+        return this.isFullScreen ? this._enableFullScreen() : this._disableFullScreen()
+    }
+    //
     toogleUI(newState = undefined, updateToogler = true) {
         this.showUI = newState != undefined ? newState : !this.showUI
         if (updateToogler) $("#menu #ui").prop('checked', this.showUI);
@@ -1080,6 +1107,11 @@ class Viewer {
     }
 
     handleStateChanges(e) {
+        if(this.stateChangeIgnore){
+            this.stateChangeIgnore = false
+            return
+        }
+
         viewer.urlLocked = true
         viewer.currentPage.hide(true, true)
         viewer.currentPage = null
@@ -1087,6 +1119,38 @@ class Viewer {
         viewer.initParseGetParams()
         viewer.handleNewLocation(true)
         viewer.urlLocked = false
+    }
+
+    _enableFullScreen() {
+        ///
+        const elem = document.documentElement
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+
+        }
+        //
+        const changeHandler = function (event) {
+            if (document.webkitIsFullScreen === false || document.mozFullScreen === false || document.msFullscreenElement === false) {
+                presenterViewer.stop(false)
+            }
+        }
+        document.addEventListener("fullscreenchange", changeHandler, false);
+        document.addEventListener("webkitfullscreenchange", changeHandler, false);
+        document.addEventListener("mozfullscreenchange", changeHandler, false);
+    }
+
+    _disableFullScreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
     }
 }
 
@@ -1115,7 +1179,7 @@ function addRemoveClass(mode, el, cls) {
     }
 }
 
-function handleStateChanges(e) {
+function handleStateChanges(e) {   
     viewer.handleStateChanges(e)
 }
 

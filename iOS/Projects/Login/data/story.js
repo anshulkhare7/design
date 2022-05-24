@@ -19,16 +19,16 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "A10482AC-D15A-41AD-8521-77EA44181EFA",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "CAAB627E-7985-427F-B4E2-0F3519D2E373",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 0,
-   "image": "register_or_sign_in_with_country_code.png",
-   "image2x": "register_or_sign_in_with_country_code@2x.png",
+   "image": "register_or_sign_in_with_country.png",
+   "image2x": "register_or_sign_in_with_country@2x.png",
    "width": 412,
    "height": 914,
-   "x": -207,
-   "y": -458,
-   "title": "Register or Sign In with country code",
+   "x": 688,
+   "y": 595,
+   "title": "Register or Sign In with country",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -42,16 +42,16 @@ var story = {
    "links": []
   },
   {
-   "id": "D56C643B-493F-428C-ABF2-5A2434194D0B",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "CD277B8F-2E3D-4DE1-AF1F-A3351D4559DB",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 1,
-   "image": "register_or_sign_in_with_country_code(1).png",
-   "image2x": "register_or_sign_in_with_country_code(1)@2x.png",
+   "image": "register_or_sign_in_.png",
+   "image2x": "register_or_sign_in_@2x.png",
    "width": 412,
    "height": 914,
-   "x": 221,
-   "y": -458,
-   "title": "Register or Sign In with country code(1)",
+   "x": 1132,
+   "y": 595,
+   "title": "Register or Sign In ",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -65,16 +65,16 @@ var story = {
    "links": []
   },
   {
-   "id": "CCB3578B-3C1B-4DF3-ACDD-5B9D5F1EDC7A",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "0F89443C-7D79-433E-98FD-D37868B6606A",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 2,
-   "image": "otp_varification.png",
-   "image2x": "otp_varification@2x.png",
+   "image": "if_register.png",
+   "image2x": "if_register@2x.png",
    "width": 412,
    "height": 914,
-   "x": 649,
-   "y": -458,
-   "title": "OTP varification",
+   "x": 1576,
+   "y": 595,
+   "title": "If Register",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -88,16 +88,16 @@ var story = {
    "links": []
   },
   {
-   "id": "D73AD14B-1CE3-4FC2-BB76-A7DAD8BEBFF0",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "F4DD2E90-778C-42CB-95FA-DAE1014C3E11",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 3,
    "image": "resend_otp.png",
    "image2x": "resend_otp@2x.png",
    "width": 412,
    "height": 914,
-   "x": 1092,
-   "y": -458,
-   "title": "Resend otp",
+   "x": 2020,
+   "y": 595,
+   "title": "Resend OTP",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -111,16 +111,16 @@ var story = {
    "links": []
   },
   {
-   "id": "D823CE37-EA91-4B67-84FB-070937917B00",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "CF414261-5014-47F2-A106-C00D2C4967B6",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 4,
-   "image": "otp_verification_and_registration.png",
-   "image2x": "otp_verification_and_registration@2x.png",
+   "image": "if_not_register.png",
+   "image2x": "if_not_register@2x.png",
    "width": 412,
    "height": 914,
-   "x": 1535,
-   "y": -458,
-   "title": "OTP verification and registration",
+   "x": 2464,
+   "y": 595,
+   "title": "If not Register",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -134,16 +134,16 @@ var story = {
    "links": []
   },
   {
-   "id": "01801505-AFE8-4899-AF3F-A716ED14AA5B",
-   "groupID": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
+   "id": "40600F58-09B8-4C0E-9788-F129BE0C77B9",
+   "groupID": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
    "index": 5,
-   "image": "sign_in.png",
-   "image2x": "sign_in@2x.png",
+   "image": "signin.png",
+   "image2x": "signin@2x.png",
    "width": 412,
    "height": 914,
-   "x": 1964,
-   "y": -458,
-   "title": "Sign in",
+   "x": 2938,
+   "y": 595,
+   "title": "SignIn",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -159,8 +159,8 @@ var story = {
  ],
  "groups": [
   {
-   "id": "243CF60E-AE25-4ABA-9355-DB1FD17717A4",
-   "name": "LogInAndroid"
+   "id": "5C6AABF5-5E5A-4E31-8943-FDAC4582FA27",
+   "name": "Login iOS"
   }
  ],
  "experimentalExisting": false,
