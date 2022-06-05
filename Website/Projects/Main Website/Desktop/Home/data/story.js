@@ -25,9 +25,9 @@ var story = {
    "image": "website_home.png",
    "image2x": "website_home@2x.png",
    "width": 1440,
-   "height": 8512,
+   "height": 7961,
    "x": 228,
-   "y": 1051,
+   "y": 1039,
    "title": "website_home",
    "transAnimType": 0,
    "layout": {
