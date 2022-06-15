@@ -25,7 +25,7 @@ var story = {
    "image": "mobile_home.png",
    "image2x": "mobile_home@2x.png",
    "width": 412,
-   "height": 8395,
+   "height": 8439,
    "x": -259,
    "y": 1051,
    "title": "Mobile_Home",
