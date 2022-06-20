@@ -25,7 +25,7 @@ var story = {
    "image": "website_home.png",
    "image2x": "website_home@2x.png",
    "width": 1440,
-   "height": 8061,
+   "height": 8669,
    "x": 217,
    "y": 1051,
    "title": "website_home",
