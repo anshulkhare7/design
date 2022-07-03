@@ -25,9 +25,9 @@ var story = {
    "image": "mobile_home_copy.png",
    "image2x": "mobile_home_copy@2x.png",
    "width": 412,
-   "height": 12568,
+   "height": 12652,
    "x": 10267,
-   "y": 2835,
+   "y": 2681,
    "title": "Mobile_Home Copy",
    "transAnimType": 0,
    "layout": {
