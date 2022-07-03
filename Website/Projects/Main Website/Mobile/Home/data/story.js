@@ -19,16 +19,16 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "FDBA8DEB-6B4D-45FE-A9CA-32EB21228B1C",
+   "id": "7758DCEA-0EE7-4F4B-987D-DAD128DECD81",
    "groupID": "3ABBB45E-FEEF-4B30-AE11-4B4F4A6EA77F",
    "index": 0,
-   "image": "mobile_home.png",
-   "image2x": "mobile_home@2x.png",
+   "image": "mobile_home_copy.png",
+   "image2x": "mobile_home_copy@2x.png",
    "width": 412,
-   "height": 8449,
-   "x": -259,
-   "y": 1051,
-   "title": "Mobile_Home",
+   "height": 12568,
+   "x": 10267,
+   "y": 2835,
+   "title": "Mobile_Home Copy",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
