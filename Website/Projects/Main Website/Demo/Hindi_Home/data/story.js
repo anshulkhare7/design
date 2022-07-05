@@ -19,16 +19,16 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "A604DEAA-9D4A-455A-AC7B-0FE2F5DD8E44",
+   "id": "DCD8B4BD-E583-48D6-B001-268479840B5D",
    "groupID": "3ABBB45E-FEEF-4B30-AE11-4B4F4A6EA77F",
    "index": 0,
-   "image": "upanishads_course_hindi.png",
-   "image2x": "upanishads_course_hindi@2x.png",
-   "width": 412,
-   "height": 1295,
-   "x": -1826,
-   "y": 7806,
-   "title": "Upanishads course_hindi",
+   "image": "website_home_hindi.png",
+   "image2x": "website_home_hindi@2x.png",
+   "width": 1440,
+   "height": 12444,
+   "x": -5954,
+   "y": 1070,
+   "title": "website_home_Hindi",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -49,9 +49,32 @@ var story = {
    "image2x": "mobile_home_hindi@2x.png",
    "width": 412,
    "height": 12755,
-   "x": -1292,
+   "x": -4392,
    "y": 1070,
    "title": "Mobile_Home_Hindi",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "A604DEAA-9D4A-455A-AC7B-0FE2F5DD8E44",
+   "groupID": "3ABBB45E-FEEF-4B30-AE11-4B4F4A6EA77F",
+   "index": 2,
+   "image": "upanishads_course_hindi.png",
+   "image2x": "upanishads_course_hindi@2x.png",
+   "width": 412,
+   "height": 1295,
+   "x": -3858,
+   "y": 1051,
+   "title": "Upanishads course_hindi",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -73,5 +96,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 2
+ "totalImages": 3
 }
