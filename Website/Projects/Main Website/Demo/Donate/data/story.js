@@ -22,13 +22,36 @@ var story = {
    "id": "7D6CECED-9BCA-4B7B-9C10-7EAC241574FB",
    "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
    "index": 0,
-   "image": "donate.png",
-   "image2x": "donate@2x.png",
+   "image": "donate_english.png",
+   "image2x": "donate_english@2x.png",
    "width": 1440,
    "height": 3882,
    "x": 8172,
    "y": 14155,
-   "title": "Donate",
+   "title": "Donate_English",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "FC4EED7D-801A-4F73-9B88-FC8C2EA92849",
+   "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
+   "index": 1,
+   "image": "donate_hindi.png",
+   "image2x": "donate_hindi@2x.png",
+   "width": 1440,
+   "height": 3687,
+   "x": 9720,
+   "y": 14155,
+   "title": "Donate_Hindi",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -50,5 +73,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 1
+ "totalImages": 2
 }
