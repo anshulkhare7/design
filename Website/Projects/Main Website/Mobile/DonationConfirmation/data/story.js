@@ -19,32 +19,9 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "8B0083B5-8970-450C-AC10-8841213E6452",
-   "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
-   "index": 0,
-   "image": "donationconfirmation_desktop.png",
-   "image2x": "donationconfirmation_desktop@2x.png",
-   "width": 1440,
-   "height": 1107,
-   "x": 5103,
-   "y": 12717,
-   "title": "DonationConfirmation_desktop",
-   "transAnimType": 0,
-   "layout": {
-    "offset": 0,
-    "totalWidth": 960,
-    "numberOfColumns": 12,
-    "columnWidth": 60,
-    "gutterWidth": 20
-   },
-   "type": "regular",
-   "fixedPanels": [],
-   "links": []
-  },
-  {
    "id": "A620C500-6D48-4000-95E9-29FD290FB2F3",
    "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
-   "index": 1,
+   "index": 0,
    "image": "donationconfirmation_mobile.png",
    "image2x": "donationconfirmation_mobile@2x.png",
    "width": 412,
@@ -73,5 +50,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 2
+ "totalImages": 1
 }
