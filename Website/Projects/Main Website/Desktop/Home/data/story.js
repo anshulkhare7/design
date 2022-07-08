@@ -25,10 +25,56 @@ var story = {
    "image": "website_home.png",
    "image2x": "website_home@2x.png",
    "width": 1440,
-   "height": 8383,
-   "x": 217,
-   "y": 1051,
+   "height": 11529,
+   "x": -5334,
+   "y": 1089,
    "title": "website_home",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "E8D67B28-DF91-47A1-8B79-C2B66A689F49",
+   "groupID": "3ABBB45E-FEEF-4B30-AE11-4B4F4A6EA77F",
+   "index": 1,
+   "image": "vedanta_mahotsav_when_mutiple_mahotsav.png",
+   "image2x": "vedanta_mahotsav_when_mutiple_mahotsav@2x.png",
+   "width": 1440,
+   "height": 2397,
+   "x": -3853,
+   "y": 1089,
+   "title": "Vedanta Mahotsav_When mutiple mahotsav",
+   "transAnimType": 0,
+   "layout": {
+    "offset": 0,
+    "totalWidth": 960,
+    "numberOfColumns": 12,
+    "columnWidth": 60,
+    "gutterWidth": 20
+   },
+   "type": "regular",
+   "fixedPanels": [],
+   "links": []
+  },
+  {
+   "id": "03F3C41F-B07D-4316-B6FA-0C7B06920FA6",
+   "groupID": "3ABBB45E-FEEF-4B30-AE11-4B4F4A6EA77F",
+   "index": 2,
+   "image": "upanishads_course.png",
+   "image2x": "upanishads_course@2x.png",
+   "width": 1440,
+   "height": 966,
+   "x": -2413,
+   "y": 1089,
+   "title": "Upanishads course",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -50,5 +96,5 @@ var story = {
  ],
  "experimentalExisting": false,
  "startPageIndex": 0,
- "totalImages": 1
+ "totalImages": 3
 }
