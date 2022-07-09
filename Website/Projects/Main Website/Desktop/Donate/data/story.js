@@ -19,16 +19,16 @@ var story = {
  "highlightLinks": false,
  "pages": [
   {
-   "id": "726529FF-8F03-4549-A309-AF5905039497",
+   "id": "7D6CECED-9BCA-4B7B-9C10-7EAC241574FB",
    "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
    "index": 0,
-   "image": "donate_home.png",
-   "image2x": "donate_home@2x.png",
+   "image": "donate_english.png",
+   "image2x": "donate_english@2x.png",
    "width": 1440,
-   "height": 3898,
-   "x": -927,
+   "height": 3691,
+   "x": 8172,
    "y": 14155,
-   "title": "Donate Home",
+   "title": "Donate_English",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
