@@ -1,5 +1,5 @@
 var story = {
- "docName": "websiteap",
+ "docName": "websiteversion1.0.1",
  "docPath": "P_P_P",
  "docVersion": "V_V_V",
  "ownerName": "",
@@ -13,22 +13,22 @@ var story = {
  "fileType": "png",
  "disableHotspots": false,
  "zoomEnabled": true,
- "title": "WebsiteAP",
+ "title": "WebsiteVersion1.0.1",
  "layersExist": true,
  "centerContent": false,
  "highlightLinks": false,
  "pages": [
   {
-   "id": "8B0083B5-8970-450C-AC10-8841213E6452",
-   "groupID": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
+   "id": "44299C83-19CF-419D-A4F3-FF9FACB284CA",
+   "groupID": "D015481C-6BAB-461E-B563-D64E4C8A43D5",
    "index": 0,
-   "image": "donationconfirmation_desktop.png",
-   "image2x": "donationconfirmation_desktop@2x.png",
+   "image": "cartpage.png",
+   "image2x": "cartpage@2x.png",
    "width": 1440,
-   "height": 771,
-   "x": 5103,
-   "y": 12717,
-   "title": "DonationConfirmation_desktop",
+   "height": 1893,
+   "x": 2191,
+   "y": -1179,
+   "title": "CartPage",
    "transAnimType": 0,
    "layout": {
     "offset": 0,
@@ -44,8 +44,8 @@ var story = {
  ],
  "groups": [
   {
-   "id": "268C3F54-BE56-4B71-BC3C-3659FE310F10",
-   "name": "Donate"
+   "id": "D015481C-6BAB-461E-B563-D64E4C8A43D5",
+   "name": "Books"
   }
  ],
  "experimentalExisting": false,
